@@ -49,7 +49,7 @@ function populateCards(resp, row, indices) {
 function getWeather(resp, value, cardBody) {
     let lat = resp[value].latlng[0];
     let lon = resp[value].latlng[1];
-    let url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=bf6c25bab5eda1c62a09470943ce4c50&units=metric';
+    let url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=bf6c25bab5eda1c62a09470943ce4c50&units=metric';
     fetch(url)
         .then((resp) => {
             return resp.json();
